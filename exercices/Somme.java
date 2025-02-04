@@ -32,31 +32,3 @@ public class Somme {
         // Note : Ne fermez pas le scanner ici si vous l'utilisez dans d'autres parties du programme
     }
 }
-
-// PSEUDO CODE
-// 			Début
-// 				Lire nombre1
-// 				Lire nombre2
-// 				somme ← nombre1 + nombre2
-// 				Afficher "La somme est : " + somme
-// 			Fin
-
-
-// NOTES ANNEXES
-
-// Type d'algorithme :
-//     C'est un algorithme simple et linéaire qui effectue une addition de deux nombres.
-//  Complexité temporelle (Big O) :
-//     La complexité de cet algorithme est O(1), ce qui signifie qu'il a une complexité constante.
-
-// Explications :
-
-//     L'algorithme effectue un nombre fixe d'opérations, indépendamment de la taille des entrées :
-//         Deux lectures d'entrées utilisateur
-//         Une addition
-//         Un affichage
-//     Toutes ces opérations sont effectuées une seule fois, quelle que soit la valeur des nombres entrés.
-//     La complexité O(1) indique que le temps d'exécution de l'algorithme reste constant, même si les nombres d'entrée deviennent très grands.
-
-//     Complexité spatiale :
-//     La complexité spatiale est également O(1) car l'algorithme utilise un nombre fixe de variables (nombre1, nombre2, somme), indépendamment de la taille des entrées.

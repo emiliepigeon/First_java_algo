@@ -19,7 +19,7 @@ public class Menu {
             System.out.println("8. Plus grand");
             System.out.println("9. Calcul moyenne");
             System.out.println("10. Nombre le plus répété");
-            System.out.println("11. Nombre pairs?");
+            System.out.println("11. Somme des nombres pairs");
             System.out.println("12. Table de multiplication");
             System.out.println("13. Prix HT");
             System.out.println("14. Prix TVA");

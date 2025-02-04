@@ -59,36 +59,3 @@ public class SommePairs {
 }
 
 
-// PSEUDO CODE
-    // Début
-    //     Lire liste
-    //     somme_pairs ← 0
-    //     Pour chaque nombre dans liste
-    //         Si nombre modulo 2 = 0 Alors
-    //             somme_pairs ← somme_pairs + nombre
-    //         FinSi
-    //     FinPour
-    //     Afficher "La somme des nombres pairs est : " + somme_pairs
-    // Fin
-
-// NOTES ANNEXES
-//   Type d'algorithme :
-//     C'est un algorithme de parcours et de filtrage qui somme les éléments pairs d'une liste.
-//   Complexité temporelle (Big O) :
-//     La complexité de cet algorithme est O(n), où n est le nombre d'éléments dans la liste.
-
-// Explications :
-
-//     L'algorithme parcourt chaque élément de la liste une seule fois.
-//     Pour chaque élément, il effectue une vérification (si le nombre est pair) et potentiellement une addition.
-//     Le nombre d'opérations est directement proportionnel au nombre d'éléments dans la liste.
-
-//     Complexité spatiale :
-//     La complexité spatiale est O(n), où n est le nombre d'éléments entrés par l'utilisateur.
-
-// Explications +:
-
-//     Une ArrayList est utilisée pour stocker tous les nombres entrés, ce qui contribue à la complexité spatiale O(n).
-//     Les autres variables (sommePairs, nombre) utilisent un espace constant.
-
-// En résumé, c'est un algorithme de parcours linéaire avec une complexité temporelle et spatiale de O(n). Il est efficace pour sa tâche spécifique de calculer la somme des nombres pairs dans une liste, et sa performance dépendra du nombre d'éléments dans la liste d'entrée. Note : La partie de saisie des données par l'utilisateur n'est généralement pas incluse dans l'analyse de complexité, car elle dépend de facteurs externes (vitesse de saisie de l'utilisateur). L'analyse se concentre sur le traitement des données une fois qu'elles sont dans la liste.
