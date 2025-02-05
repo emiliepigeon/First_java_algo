@@ -15,7 +15,8 @@ public class SommePairs {
         ArrayList<Integer> liste = new ArrayList<>();
         
         // Demander à l'utilisateur d'entrer des nombres
-        System.out.println("Entrez une série de nombres (entrez 'fin' pour terminer) :");
+        System.out.println("Entrez une série de nombres: 
+            (entre chaque nombre touche entrée et entrée puis saisir 'fin' pour terminer) :");
         
         // Lire les nombres jusqu'à ce que l'utilisateur entre "fin"
         while (true) {

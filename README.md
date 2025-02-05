@@ -738,12 +738,196 @@ Exo 16 : Suite de Fibonacci => Fibonacci.java
 
 Exo 17 : Eliminer les doublons dans une liste de nombres => Doublons.java
 
+
+// PSEUDO CODE
+
+        // Début
+        //     liste ← [1, 2, 3, 1, 2, 4, 5, 3, 6]  // Exemple de liste avec des doublons
+        //     nouvelle_liste ← []
+
+        //     Pour chaque élément dans liste
+        //         Si élément n'est pas dans nouvelle_liste Alors
+        //             Ajouter élément à nouvelle_liste
+        //         FinSi
+        //     FinPour
+
+        //     Afficher "Liste sans doublons :", nouvelle_liste
+        // Fin
+
+------------------------------------------------------------------------
+
+// NOTES ANNEXES
+
+//   Type d'algorithme :
+//     C'est un algorithme de suppression de doublons qui préserve l'ordre original des éléments.
+//   Complexité temporelle (Big O) :
+//     La complexité de cet algorithme est O(n), où n est le nombre d'éléments dans la liste.
+
+// Explications :
+
+//     La création du LinkedHashSet à partir de la liste initiale prend O(n) temps.
+//     La conversion du LinkedHashSet en ArrayList prend également O(n) temps.
+//     Toutes les autres opérations (saisie des données, affichage) sont négligeables en comparaison.
+
+//     Complexité spatiale :
+//     La complexité spatiale est O(n), où n est le nombre d'éléments uniques dans la liste.
+
+// Explications +:
+
+//     Une ArrayList initiale est utilisée pour stocker tous les nombres entrés : O(n)
+//     Un LinkedHashSet est créé pour stocker les éléments uniques : O(n) dans le pire cas (tous les éléments sont uniques)
+//     Une nouvelle ArrayList est créée à partir du LinkedHashSet : O(n)
+
+// Caractéristiques importantes :
+
+//     L'utilisation d'un LinkedHashSet est cruciale ici car il permet de supprimer les doublons tout en préservant l'ordre d'insertion des éléments.
+//     Cette approche est efficace car elle effectue la suppression des doublons en un seul passage sur les données.
+
+// En résumé, c'est un algorithme efficace pour supprimer les doublons tout en préservant l'ordre, avec une complexité temporelle et spatiale linéaire O(n). Il offre un bon équilibre entre performance et préservation de l'ordre original des éléments.
+
 /////////////////////////////////////////////////////////////
 
 Exo 18 : Simulation de calcul de prime d'assurance pour véhicules => CalculAssurance.java
 
+// Script:
+// Calcul de la prime d’assurance basée sur des critères
+// Règles :
+// Prime de base: Voiture  500€, Moto  300€, Camion  1000€.
+// Majoration pour âge du véhicule : 10% si le véhicule a plus de 5 ans.
+// Majoration pour kilométrage annuel : 5% si plus de 20 000 km,  15%
+// si plus de 30 000km    
+
+
+// PSEUDO CODE
+
+// Début
+//     // Données de base
+//     type_vehicule ← "Voiture"      // Peut être "Voiture", "Moto" ou "Camion"
+//     age_vehicule ← 6               // Âge du véhicule en années
+//     kilometrage_annuel ← 25000     // Kilométrage annuel
+//     prime ← 0                      // Initialisation de la prime de base
+
+//     // Définition de la prime de base selon le type de véhicule
+//     Si type_vehicule = "Voiture" Alors
+//         prime ← 500
+//     Sinon Si type_vehicule = "Moto" Alors
+//         prime ← 300
+//     Sinon Si type_vehicule = "Camion" Alors
+//         prime ← 1000
+//     FinSi
+
+//     // Majoration pour l'âge du véhicule
+//     Si age_vehicule > 5 Alors
+//         prime ← prime * 1.10       // +10%
+//     FinSi
+
+//     // Majoration pour le kilométrage annuel
+//     Si kilometrage_annuel > 30000 Alors
+//         prime ← prime * 1.15       // +15%
+//     Sinon Si kilometrage_annuel > 20000 Alors
+//         prime ← prime * 1.05       // +5%
+//     FinSi
+
+//     Afficher "Prime d'assurance :", prime
+// Fin
+
+---------------------------------------------------------------------
+
+// NOTES ANNEXES
+
+//   Type d'algorithme :
+//     C'est un algorithme de calcul conditionnel qui utilise une combinaison de structures switch et if-else pour déterminer la prime d'assurance en fonction de plusieurs critères.
+//   Complexité temporelle (Big O) :
+//     La complexité de cet algorithme est O(1), ce qui signifie qu'il a une complexité constante.
+
+// Explications :
+
+//     L'algorithme effectue un nombre fixe d'opérations, indépendamment des valeurs d'entrée :
+//         Trois lectures d'entrées utilisateur
+//         Un switch pour déterminer la prime de base
+//         Deux vérifications conditionnelles (if et if-else) pour les majorations
+//         Un calcul final et un affichage
+//     Toutes ces opérations sont effectuées une seule fois, quelle que soit la valeur des entrées.
+//     La complexité O(1) indique que le temps d'exécution de l'algorithme reste constant.
+
+//     Complexité spatiale :
+//     La complexité spatiale est également O(1) car l'algorithme utilise un nombre fixe de variables (typeVehicule, ageVehicule, kilometrageAnnuel, prime), indépendamment des valeurs d'entrée.
+
+// Caractéristiques importantes :
+
+//     L'algorithme gère trois types de véhicules avec des primes de base différentes.
+//     Il applique des majorations basées sur l'âge du véhicule et le kilométrage annuel.
+//     Le calcul est effectué par étapes, en appliquant des pourcentages de majoration.
+//     Il gère le cas d'un type de véhicule non reconnu.
+
+// En résumé, c'est un algorithme efficace avec une complexité constante en temps et en espace. Il est rapide et prévisible en termes de temps d'exécution, quelle que soit la combinaison de type de véhicule, d'âge et de kilométrage entrée.
+
 /////////////////////////////////////////////////////////////
 
 Exo 19 : Simulation de catégories de prime d'assurance pour un assuré => CalculAssurance.java
+
+// Script:
+// Catégorie d'assurance pour un véhicule
+// Ecrire un script qui retourne la catégorie d’un assuré en fonction des critères
+// suivants
+// Critères :
+// Catégorie "Rouge" Moins de 2 ans de permis ou plus de 3 accidents.
+// Catégorie "Orange"  Moins de 5 ans de permis et entre 1 et 2
+// accidents.
+// Catégorie "Vert"  Plus de 5 ans de permis, avec moins de 1 accident.
+// Catégorie "Bleu"  Plus de 10 ans de permis sans accident.
+
+// PSEUDO CODE
+
+        // Début
+        //     // Données d'entrée
+        //     annees_permis ← 6     // Nombre d'années de permis
+        //     accidents ← 2         // Nombre d'accidents
+
+        //     // Initialisation de la catégorie par défaut
+        //     categorie ← "Non défini"
+
+        //     // Détermination de la catégorie d'assurance
+        //     Si annees_permis < 2 ou accidents > 3 Alors
+        //         categorie ← "Rouge"
+        //     Sinon Si annees_permis < 5 et accidents ≥ 1 et accidents ≤ 2 Alors
+        //         categorie ← "Orange"
+        //     Sinon Si annees_permis > 5 et accidents < 1 Alors
+        //         categorie ← "Vert"
+        //     Sinon Si annees_permis > 10 et accidents = 0 Alors
+        //         categorie ← "Bleu"
+        //     FinSi
+
+        //     Afficher "Catégorie d'assurance :", categorie
+        // Fin
+
+--------------------------------------------------------------------------------------        
+
+// NOTES ANNEXES
+
+//   Type d'algorithme :
+//     C'est un algorithme de décision conditionnelle qui utilise une structure if-else pour déterminer la catégorie d'assurance en fonction de critères multiples.
+//   Complexité temporelle (Big O) :
+//     La complexité de cet algorithme est O(1), ce qui signifie qu'il a une complexité constante.
+
+// Explications :
+
+//     L'algorithme effectue un nombre fixe d'opérations, indépendamment des valeurs d'entrée :
+//         Deux lectures d'entrées utilisateur
+//         Une série de vérifications conditionnelles (if-else if)
+//         Un affichage
+//     Toutes ces opérations sont effectuées une seule fois, quelle que soit la valeur des entrées.
+//     La complexité O(1) indique que le temps d'exécution de l'algorithme reste constant.
+
+//     Complexité spatiale :
+//     La complexité spatiale est également O(1) car l'algorithme utilise un nombre fixe de variables (anneesPermis, accidents, categorie), indépendamment des valeurs d'entrée.
+
+// Caractéristiques importantes :
+
+//     L'algorithme gère plusieurs critères combinés (années de permis et nombre d'accidents).
+//     Il utilise une structure de décision en cascade pour déterminer la catégorie.
+//     Une catégorie par défaut "Non défini" est initialisée, ce qui permet de gérer les cas non prévus.
+
+// En résumé, c'est un algorithme simple et efficace avec une complexité constante en temps et en espace. Il est très rapide et prévisible en termes de temps d'exécution, quelle que soit la combinaison d'années de permis et de nombre d'accidents entrée.
 
 /////////////////////////////////////////////////////////////
