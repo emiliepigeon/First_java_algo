@@ -16,8 +16,7 @@ public class PlusRepete {
         ArrayList<Integer> liste = new ArrayList<>();
         
         // J'explique à l'utilisateur comment entrer les nombres
-        System.out.println("Entrez une série de nombres: 
-            (entre chaque nombre touche entrée et entrée puis saisir 'fin' pour terminer) :");
+        System.out.println("Entrez une série de nombres: (entre chaque nombre touche entrée et entrée puis saisir 'fin' pour terminer) :");
         
         // Je commence une boucle qui continuera jusqu'à ce que l'utilisateur tape 'fin'
         while (true) {

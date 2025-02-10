@@ -11,8 +11,7 @@ public class PlusGrand {
         ArrayList<Integer> liste = new ArrayList<>();
         
         // Lire la liste de nombres
-        System.out.println("Entrez une série de nombres: 
-            (entre chaque nombre touche entrée et entrée puis saisir 'fin' pour terminer) :");
+        System.out.println("Entrez une série de nombres: (entre chaque nombre touche entrée et entrée puis saisir 'fin' pour terminer) :");
         while (true) {
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("fin")) {

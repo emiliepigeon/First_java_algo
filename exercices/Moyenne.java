@@ -11,8 +11,7 @@ public class Moyenne {
         ArrayList<Double> listeDeNotes = new ArrayList<>();
         
         // Lire la liste de notes
-        System.out.println("Entrez une série de notes: 
-            (entre chaque note touche entrée et entrée puis saisir 'fin' pour terminer) :");
+        System.out.println("Entrez une série de notes: (entre chaque note touche entrée et entrée puis saisir 'fin' pour terminer) :");
         while (true) {
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("fin")) {

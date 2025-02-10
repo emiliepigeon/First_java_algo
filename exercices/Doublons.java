@@ -18,8 +18,7 @@ public class Doublons {
         List<Integer> liste = new ArrayList<>();
         
         // Demande à l'utilisateur d'entrer les nombres
-        System.out.println("Entrez les nombres de la liste (à chaque nombre entrez 
-                et saisir la note suivante puis entrez er saisir'fin' pour terminer) :");
+        System.out.println("Entrez les nombres de la liste (à chaque nombre entrez et saisir la note suivante puis entrez er saisir'fin' pour terminer) :");
         
         while (true) {
                 String input = scanner.nextLine();
